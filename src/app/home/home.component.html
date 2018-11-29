@@ -1,0 +1,8 @@
+<form  (ngSubmit)="onGet(select, input)">
+    <select name="searchForm" id="searchForm" [(ngModel)]='select' required>
+      <option *ngFor="let search of searchForms" value="{{ search.value }}">{{ search.view }}</option>
+    </select>
+    <input type="text" name="search" [(ngModel)]='input' required>
+    <button type="submit">Submit</button>
+  </form>
+  <p>{{ result | json }}</p>
